@@ -1,7 +1,8 @@
 # Itp404-final-project-ember
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+My final project will be a music discovery application called 'Puddy'. It attends to encourage a different type of discovery behavior that experiments with what other non-musical factors can help people to find new music that connects with them (i.e. artist's hometown, band artwork, etc.). I will build a database of musical artists with certain pieces of information  connected to each, and then will display that information in a dynamic interface — each piece of info will be linked to music connected through some api (soundcloud or spotify, or something else). Users will also be able to add artists/information about artists.
+
+Seems like it should be a rewarding challenge!
 
 ## Prerequisites
 
@@ -50,4 +51,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-

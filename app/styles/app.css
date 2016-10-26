@@ -1,0 +1,5 @@
+.menu {list-style:none;}
+.menu > li {float: left;}
+.menu > li > a {color:#555;float: none;padding: 10px 16px 11px;display: block;}
+.menu > li > a:hover {color: #F95700;}
+.menu .active {color:#F95700;}
