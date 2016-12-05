@@ -1,5 +1,84 @@
+
 .menu {list-style:none;}
 .menu > li {float: left;}
 .menu > li > a {color:#555;float: none;padding: 10px 16px 11px;display: block;}
 .menu > li > a:hover {color: #F95700;}
 .menu .active {color:#F95700;}
+.toFloat:focus {
+  outline: none;
+}
+
+.floatingobjects {
+  position: absolute;
+  top: 50;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: hidden;
+  overflow: hidden;
+}
+.floatingobjects .toFloat {
+  box-shadow: 4px 4px 10px #888888;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: 0ms all;
+  transition: 0ms all;
+  display: hidden;
+  position: absolute;
+  font-size: 12pt;
+  -webkit-animation: 10s floatUp ease-in infinite;
+          animation: 10s floatUp ease-in infinite;
+  top: 100%;
+}
+.floatingobjects .toFloat:before {
+  display: inline-block;
+}
+.floatingobjects .toFloat:nth-child(odd):before {
+  -webkit-animation: 1s slowRotate linear;
+          animation: 1s slowRotate linear;
+}
+.floatingobjects .toFloat:nth-child(even):before {
+  -webkit-animation: 5s slowRotate linear;
+          animation: 5s slowRotate linear;
+  -webkit-animation-direction: reverse;
+          animation-direction: reverse;
+}
+@-webkit-keyframes floatUp {
+  0% {
+    top: 100%;
+    top: calc(100%);
+  }
+  100% {
+    top: -40%;
+    top: 5em;
+  }
+}
+@keyframes floatUp {
+  0% {
+    top: 100%;
+    top: calc(100%);
+  }
+  100% {
+    top: -40%;
+    top: 5em;
+  }
+}
+@-webkit-keyframes slowRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+@keyframes slowRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}

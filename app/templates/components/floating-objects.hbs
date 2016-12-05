@@ -1,0 +1,35 @@
+{{yield}}
+{{input value=data.id id='artist' class="form-control"}}
+{{#each data.data as |artist|}}
+{{#if-equal param1=artist.isPicture param2=false}}
+{{#if-equal param1=artist.typeCode param2=1}}
+<button class="toFloat btn-primary btn-lg" type="button" {{action 'Open' artist}}> {{artist.information}}
+  </button>
+{{/if-equal}}
+{{#if-equal param1=artist.typeCode param2=2}}
+<button class="toFloat btn-danger btn-lg" type="button" {{action 'Open'  artist}}> {{artist.information}}
+  </button>
+{{/if-equal}}
+{{#if-equal param1=artist.typeCode param2=3}}
+<button class="toFloat btn-success btn-lg" type="button" {{action 'Open' artist}}> {{artist.information}}
+</button>
+{{/if-equal}}
+{{/if-equal}}
+{{#if-equal param1=artist.isPicture param2=true}}
+{{#if-equal param1=artist.typeCode param2=1}}
+<button class="toFloat btn-primary btn-lg" type="button" {{action 'Open' artist}}>
+  <img src={{artist.information}} alt="Smiley face" height="200" width="200">
+</button>
+{{/if-equal}}
+{{#if-equal param1=artist.typeCode param2=2}}
+<button class="toFloat btn-danger btn-lg" type="button" {{action 'Open' artist}}>
+  <img src={{artist.information}} alt="Smiley face" height="200" width="200">
+</button>
+{{/if-equal}}
+{{#if-equal param1=artist.typeCode param2=3}}
+<button class="toFloat btn-success btn-lg" type="button" {{action 'Open' artist}}>
+  <img src={{artist.information}} alt="Smiley face" height="200" width="200">
+</button>
+{{/if-equal}}
+{{/if-equal}}
+{{/each}}
